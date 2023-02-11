@@ -13,6 +13,10 @@ module DatabaseConnector{
         });
         return connection
     }
+
+    export function disconnect(connection : Connection) {
+        connection.end()
+    }
 }
 
 export default DatabaseConnector

@@ -18,5 +18,9 @@ var DatabaseConnector;
         return connection;
     }
     DatabaseConnector.connect = connect;
+    function disconnect(connection) {
+        connection.end();
+    }
+    DatabaseConnector.disconnect = disconnect;
 })(DatabaseConnector || (DatabaseConnector = {}));
 exports.default = DatabaseConnector;
